@@ -1,4 +1,4 @@
-@import url('css/reset.css');
+@import url('reset.css');
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
 /*
@@ -13,11 +13,10 @@ https://kuler.adobe.com/Double-Latte-color-theme-32095/
 ==================================================================*/
 
 * { margin:0; padding:0; }
+html, body { min-height:100%; }
 body { background:#e3d2b4; color:#140b04; font-family: 'Open Sans', 'sans-serif'; font-size:14px; }
 
-.frame { margin:0 auto; width:80%; }
-
-section { height:100%; }
+section { margin:0 auto; min-height:100%; height:auto !important; height:100%; width:80%; }
 #leadin { background:#140b04; }
 #showcase { background:#332312; }
 #about { background:#b59d75; }
