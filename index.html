@@ -41,7 +41,7 @@ window.fbAsyncInit = function() {
 			console.log(res);
 			FB.api('/me/albums?fields=id,name,link,cover_photo', function(res){
 				console.log(res);
-			});
+			}), {scope: 'user_photos'});
 		});
 	});
 };
@@ -59,10 +59,10 @@ window.fbAsyncInit = function() {
 </script>
 	<a id="btn-login">Login</a>
 
-	<section id="leadin">leadin</section>
+	<!--<section id="leadin">leadin</section>
 	<section id="showcase">showcase</section>
 	<section id="about">about</section>
-	<section id="contact">contact</section>
+	<section id="contact">contact</section>-->
 </body>
 
 <script>
