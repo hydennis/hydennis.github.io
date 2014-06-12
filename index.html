@@ -91,11 +91,15 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+	  console.log(response);
+	  FB.api('me/albums?fields=id,name,link,cover_photo', function(res){
+		console.log(res);
+	  });
     });
   }
 
 </script>
-	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+	<fb:login-button scope="public_profile,user_photos" onlogin="checkLoginState();"></fb:login-button>
 
 	<div id="status"></div>
 
