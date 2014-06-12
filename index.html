@@ -41,8 +41,8 @@ window.fbAsyncInit = function() {
 			console.log(res);
 			FB.api('/me/albums?fields=id,name,link,cover_photo', function(res){
 				console.log(res);
-			}, {scope: 'user_photos'});
-		});
+			});
+		}, {scope: 'user_photos'});
 	});
 };
 
