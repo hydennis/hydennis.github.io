@@ -96,7 +96,7 @@ var album = {};
 		console.log(album);
 		$.each(album, function(i, elm){
 			console.log(elm);
-			FB.api('/406783892297/photos?fields=images,id', function(res){
+			FB.api('/'+elm.id+'/photos?fields=id', function(res){
 				console.log(res);
 			});
 		});
