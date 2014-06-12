@@ -86,22 +86,28 @@ var album = {};
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
-    //FB.api('/me', function(response) {
-    //  document.getElementById('status').innerHTML =
-    //    'Thanks for logging in, ' + response.name + '!';
-	//  console.log(response);
 	  FB.api('/me/albums?fields=id,name,link,cover_photo', function(res){
-		console.log(res);
 		album = res.data;
 		console.log(album);
 		$.each(album, function(i, elm){
 			console.log(elm);
 			FB.api('/'+elm.id+'/photos?fields=id', function(res){
-				console.log(res);
+				console.log(res.data);
+				album.photoList = res.data;
+				
+				var appendHTML = '<div class="album"><h1>'+album.name+'</h1>';
+				appendHTML += '<div>Album Cover<br /><img style="width:50px;" src="http://www.facebook.com/'+album.cover_photo+'" /></div>';
+				appendHTML += '<ul>';
+				$.each(album.photoList, function(i, elm){
+					appendHTML += '<li><img style="width:30px; src="http://www.facebook.com/'+elm.id+'" /></li>';
+				});
+				appendHTML += '</ul>';
+				
+				$("#status").append(appendHTML);
+				
 			});
 		});
 	  });
-    //});
   }
 
 </script>
