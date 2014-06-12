@@ -93,9 +93,10 @@ var album = {};
 	  FB.api('me/albums?fields=id,name,link,cover_photo', function(res){
 		console.log(res);
 		album = res;
-		$.each(album, function(i, elm){
+		console.log(album);
+		/*$.each(album, function(i, elm){
 			console.log(elm.id);
-		});
+		});*/
 	  });
     });
   }
