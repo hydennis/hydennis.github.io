@@ -89,15 +89,12 @@ var album = {};
 	  FB.api('/me/albums?fields=id,name,link,cover_photo', function(res){
 		$.each(res.data, function(i, elm){
 			console.log(elm);
-			FB.api('/'+elm.id+'/photos?fields=id', function(res){
-				console.log(res.data);
-				elm.photoList = res.data;
-				
+			FB.api('/'+elm.id+'/photos', function(response){				
 				var appendHTML = '<div class="album"><h1>'+elm.name+'</h1>';
 				appendHTML += '<div>Album Cover<br /><img style="width:50px;" src="http://www.facebook.com/'+elm.cover_photo+'" /></div>';
 				appendHTML += '<ul>';
-				$.each(elm.photoList, function(i, elm){
-					appendHTML += '<li><img style="width:30px; src="http://www.facebook.com/'+elm.id+'" /></li>';
+				$.each(response.data, function(idx, elem){
+					appendHTML += '<li><img style="width:30px;" src="'+elem.picture+'" /></li>';
 				});
 				appendHTML += '</ul>';
 				
@@ -106,6 +103,10 @@ var album = {};
 			});
 		});
 	  });
+  }
+  
+  function getImageLink(){
+  
   }
 
 </script>
