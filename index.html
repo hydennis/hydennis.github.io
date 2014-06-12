@@ -92,11 +92,10 @@ var album = {};
 			FB.api('/'+elm.id+'/photos', function(response){				
 				var appendHTML = '<div class="album"><h1>'+elm.name+'</h1>';
 				appendHTML += '<div>Album Cover<br /><img src="'+getImageByID(elm.cover_photo)+'" /></div>';
-				appendHTML += '<ul>';
 				$.each(response.data, function(idx, elem){
-					appendHTML += '<li><img src="'+elem.picture+'" /></li>';
+					appendHTML += '<img src="'+elem.picture+'" />';
 				});
-				appendHTML += '</ul><hr /></div>';
+				appendHTML += '<hr /></div>';
 				
 				$("#status").append(appendHTML);
 				
