@@ -39,10 +39,10 @@ window.fbAsyncInit = function() {
 	$("#btn-login").click(function(){
 		FB.login(function(res) {
 			console.log(res);
-			FB.api('/me/albums?fields=id,name,link,cover_photo', function(res){
+			FB.api('/me/', function(res){
 				console.log(res);
 			});
-		}, {scope: 'user_photos'});
+		});
 	});
 };
 
