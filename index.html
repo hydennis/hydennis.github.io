@@ -92,7 +92,7 @@ var album = {};
 				appendHTML = '<div class="album"><h1>'+elm.name+'</h1>';
 			
 			FB.api('/'+elm.cover_photo, function(res){
-				appendHTML += '<div style="border:1px solid #80000"><img src="'+res.picture+'" />Album Cover</div>';
+				appendHTML += '<div style="border:solid 1px #800000"><img src="'+res.picture+'" />Album Cover</div>';
 			});
 			
 			FB.api('/'+elm.id+'/photos', function(response){				
