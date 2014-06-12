@@ -91,7 +91,7 @@ var album = {};
 			var coverImageLink, 
 				appendHTML = '<div class="album"><h1>'+elm.name+'</h1>';
 			
-			FB.api('/'+photoid, function(res){
+			FB.api('/'+elm.cover_photo, function(res){
 				appendHTML += '<div style="border:1px solid #80000"><img src="'+res.picture+'" />Album Cover</div>';
 			});
 			
