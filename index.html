@@ -106,6 +106,7 @@ var album = {};
   
   function getImageByID(photoid){
 	FB.api('/'+photoid, function(res){
+		console.log(res);
 		return res.picture;
 	});
   }
