@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	
-	<title>Dennis' Portfolio</title>
+	<title>Dennis' Temp</title>
 	
 	<link rel="shortcut icon" href="coffee.ico">
 	<link rel="stylesheet" href="css/style.css">
@@ -88,10 +88,15 @@ var album = {};
   function testAPI() {
 	  FB.api('/me/albums?fields=id,name,link,cover_photo', function(res){
 		$.each(res.data, function(i, elm){
-			console.log(elm);
+			var coverImageLink, 
+				appendHTML = '<div class="album"><h1>'+elm.name+'</h1>';
+			
+			FB.api('/'+photoid, function(res){
+				appendHTML += '<div style="border:1px solid #80000"><img src="'+res.picture+'" />Album Cover</div>';
+			});
+			
 			FB.api('/'+elm.id+'/photos', function(response){				
-				var appendHTML = '<div class="album"><h1>'+elm.name+'</h1>';
-				appendHTML += '<div>Album Cover<br /><img src="'+getImageByID(elm.cover_photo)+'" /></div>';
+				
 				$.each(response.data, function(idx, elem){
 					appendHTML += '<img src="'+elem.picture+'" />';
 				});
@@ -104,12 +109,7 @@ var album = {};
 	  });
   }
   
-  function getImageByID(photoid){
-	FB.api('/'+photoid, function(res){
-		console.log(res);
-		return res.picture;
-	});
-  }
+
 
 </script>
 	<fb:login-button scope="public_profile,user_photos" onlogin="checkLoginState();"></fb:login-button>
