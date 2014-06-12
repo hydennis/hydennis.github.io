@@ -91,12 +91,12 @@ var album = {};
 			console.log(elm);
 			FB.api('/'+elm.id+'/photos', function(response){				
 				var appendHTML = '<div class="album"><h1>'+elm.name+'</h1>';
-				appendHTML += '<div>Album Cover<br /><img style="width:50px;" src="http://www.facebook.com/'+elm.cover_photo+'" /></div>';
+				appendHTML += '<div>Album Cover<br /><img src="'+getImageByID(elm.cover_photo)+'" /></div>';
 				appendHTML += '<ul>';
 				$.each(response.data, function(idx, elem){
-					appendHTML += '<li><img style="width:30px;" src="'+elem.picture+'" /></li>';
+					appendHTML += '<li><img src="'+elem.picture+'" /></li>';
 				});
-				appendHTML += '</ul>';
+				appendHTML += '</ul><hr /></div>';
 				
 				$("#status").append(appendHTML);
 				
@@ -105,8 +105,10 @@ var album = {};
 	  });
   }
   
-  function getImageLink(){
-  
+  function getImageByID(photoid){
+	FB.api('/'+photoid, function(res){
+		return res.picture;
+	});
   }
 
 </script>
