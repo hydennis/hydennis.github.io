@@ -1,30 +1,64 @@
-@import url('reset.css');
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
+/* ---------- color theme ----------
+Primary color palette:
+#00BCD4
+100		#B2EBF2
+500		#00BCD4
+700		#0097A7
 
-/*
-color theme used:
-#140b04
-#332312
-#b59d75
-#e3d2b4
-#fff7ea
+Secondary color palette:
+#FFD740
+A100	#FFE57F	
+A400	#FFC400
 
-https://kuler.adobe.com/Double-Latte-color-theme-32095/
-==================================================================*/
+Opacity on light background:
+Base color: 100%
+Text: 87%
+Secondary text/icons: 54%
+Disabled/Hints text: 38%
+Dividers: 12%
 
-* { margin:0; padding:0; }
-html, body { min-height:100%; }
-body { background:#e3d2b4; color:#140b04; font-family: 'Open Sans', 'sans-serif'; font-size:14px; }
+Opacity on dark background:
+Base color: 100%
+Text: 100%
+Secondary text/icons: 70%
+Disabled/Hints text: 30%
+Dividers: 12%
+---------- ---------- */
 
-section { margin:0 auto; min-height:100%; height:auto !important; height:100%; width:80%; }
-#leadin { background:#140b04; }
-#showcase { background:#332312; }
-#about { background:#b59d75; }
-#contact { background:#fff7ea; }
+/* ---------- reset CSS ---------- */
+html, body { font-size:24px; color:rgba(0,0,0,0.87); font-family:'Lucida grande', Tahoma, Verdana, Geneva, Arial, 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', sans-serif; }
+a { cursor:pointer; text-decoration:none; }
 
-/*
-responsive CSS for mobile devices
-==================================================================*/
-/*@media screen and (max-width:640px) {
-	.frame { width:100%; }
-}*/
+
+/* ---------- content style ---------- */
+nav { display:block; position:fixed; left:0; top:0; width:100%; background:#00BCD4; box-shadow:0 0 10px rgba(0,0,0,0.50); z-index:999; }
+nav a { display:block; float:left; width:25%; padding:10px 0; text-align:center; }
+nav a i.material-icons { font-size:1.5em; color:rgba(255,255,255,1); vertical-align:middle; }
+nav a span { display:inline-block; color:rgba(255,255,255,1); vertical-align:middle; }
+
+#content {  }
+section { text-align:center; background:#fff; box-shadow:0 0 10px rgba(0,0,0,0.50); }
+#sectAbout {  }
+
+.btn { display:inline-block; background:#FFD740; padding:10px; border-radius:5px; box-shadow:0 2px 10px rgba(0,0,0,0.50); }
+
+
+/* ----- override style of pagepiling ----- */
+#pp-nav span { background:rgba(0,0,0,0.12); }
+#pp-nav li .active span { background:#FFD740; }
+.pp-tooltip { color:rgba(0,0,0,0.38); }
+
+/* ---------- tablet style for device width <= 980px ---------- */
+@media screen and (max-width: 980px) {
+
+}
+
+/* ---------- mobile style for device width <= 480px ---------- */
+@media screen and (max-width: 480px) {
+    nav { top:auto; bottom:0; }
+	nav a span { display:none; }
+}
+
+/* ---------- common style ---------- */
+.clear { clear:both; }
+
