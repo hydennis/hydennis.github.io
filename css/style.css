@@ -26,39 +26,26 @@ Dividers: 12%
 ---------- ---------- */
 
 /* ---------- reset CSS ---------- */
-html, body { font-size:24px; color:rgba(0,0,0,0.87); font-family:'Lucida grande', Tahoma, Verdana, Geneva, Arial, 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', sans-serif; }
+html, body { font-size:18px; color:#fff; font-family: 'Share Tech', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', sans-serif; background:#444; }
+h1 { font-family:'Source Code Pro', monospace; font-weight: bold; }
+
 a { cursor:pointer; text-decoration:none; }
+a:focus, a:hover { text-decoration:none; }
 
 
 /* ---------- content style ---------- */
-nav { display:block; position:fixed; left:0; top:0; width:100%; background:#00BCD4; box-shadow:0 0 10px rgba(0,0,0,0.50); z-index:999; }
-nav a { display:block; float:left; width:25%; padding:10px 0; text-align:center; }
-nav a i.material-icons { font-size:1.5em; color:rgba(255,255,255,1); vertical-align:middle; }
-nav a span { display:inline-block; color:rgba(255,255,255,1); vertical-align:middle; }
+nav { position:relative; position:fixed; left:0; top:0; width:100%; background:#00BCD4; box-shadow:0 0 10px rgba(0,0,0,0.50); z-index:999; }
+nav a { padding: 10px 0; }
+nav a span { display:inline-block; color:rgba(255,255,255,1); vertical-align:middle; font-size:24px; }
+nav a:hover span { color:#FFC400; }
 
-#content {  }
-section { text-align:center; background:#fff; box-shadow:0 0 10px rgba(0,0,0,0.50); }
-#sectAbout {  }
+#home { height:100vh; }
+#home:before { content:""; display:inline-block; height:100%; vertical-align:middle; margin-left:-.5em; }
+#home h1 { display:inline-block; vertical-align:middle; max-width:100%; }
 
-.btn { display:inline-block; background:#FFD740; padding:10px; border-radius:5px; box-shadow:0 2px 10px rgba(0,0,0,0.50); }
-
-
-/* ----- override style of pagepiling ----- */
-#pp-nav span { background:rgba(0,0,0,0.12); }
-#pp-nav li .active span { background:#FFD740; }
-.pp-tooltip { color:rgba(0,0,0,0.38); }
-
-/* ---------- tablet style for device width <= 980px ---------- */
-@media screen and (max-width: 980px) {
-
-}
 
 /* ---------- mobile style for device width <= 480px ---------- */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     nav { top:auto; bottom:0; }
-	nav a span { display:none; }
 }
-
-/* ---------- common style ---------- */
-.clear { clear:both; }
 
