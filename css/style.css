@@ -41,6 +41,7 @@ nav a:hover span { color:#FFC400; }
 
 #landing { background:#444; }
 #landing canvas { position: absolute; top:0; }
+#landing h1 { color:#fff; }
 
 #home { height:100vh; }
 #home:before { content:""; display:inline-block; height:100%; vertical-align:middle; margin-left:-.5em; }
