@@ -39,6 +39,9 @@ nav a { padding: 10px 0; }
 nav a span { display:inline-block; color:rgba(255,255,255,1); vertical-align:middle; font-size:24px; }
 nav a:hover span { color:#FFC400; }
 
+#landing { background:#444; }
+#landing canvas { position: absolute; top:0; }
+
 #home { height:100vh; }
 #home:before { content:""; display:inline-block; height:100%; vertical-align:middle; margin-left:-.5em; }
 #home h1 { display:inline-block; vertical-align:middle; max-width:100%; }
