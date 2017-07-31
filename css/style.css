@@ -27,28 +27,32 @@ Dividers: 12%
 
 /* ---------- reset CSS ---------- */
 html, body { font-size:24px; color:#444; font-family: 'Share Tech', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', sans-serif; background:#fff; }
-h1 { font-family:'Source Code Pro', monospace; font-weight: bold; }
+h1, h2 { font-family: 'Poiret One', cursive; font-weight: bold; }
+h2 { color:#0097A7; }
 
 a { cursor:pointer; text-decoration:none; }
 a:focus, a:hover { text-decoration:none; }
 
 
 /* ---------- content style ---------- */
-nav { position:relative; position:fixed; left:0; top:0; width:100%; background:#00BCD4; box-shadow:0 0 10px rgba(0,0,0,0.50); z-index:999; }
+nav { position:fixed; left:0; top:0; width:100%; background:#00BCD4; box-shadow:0 0 10px rgba(0,0,0,0.50); z-index:999; }
 nav a { padding: 10px 0; }
-nav a span { display:inline-block; color:rgba(255,255,255,1); vertical-align:middle; font-size:24px; }
+nav a span { display:inline-block; color:rgba(255,255,255,1); vertical-align:middle; font-size:24px; font-family: 'Poiret One', cursive; }
 nav a:hover span { color:#FFC400; }
 
-section{ position:relative; }
+section{ position:relative; padding-top:60px; padding-bottom:60px; }
 
 #landing { background:#444; }
 #landing canvas { position: absolute; top:0; }
 #landing h1 { color:#B2EBF2; }
 
-#home { height:100vh; }
+#home, #contact { height:100vh; }
 #home:before { content:""; display:inline-block; height:100%; vertical-align:middle; margin-left:-.5em; }
 #home h1 { display:inline-block; vertical-align:middle; max-width:100%; }
 
+
+#showcase {  }
+.block { display:block; width:300px; height:150px; background:#FFE57F; }
 
 /* ---------- mobile style for device width <= 480px ---------- */
 @media screen and (max-width: 768px) {
