@@ -1,7 +1,7 @@
 var min = 200;
-// particlesJS.load('landing', 'js/particlesjs-config.json', function() {
-//     console.log('callback - particles.js config loaded');
-// });
+particlesJS.load('landing', 'js/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+});
 
 ;(function() {
 	$(".block").each(function(){
