@@ -26,7 +26,7 @@ Dividers: 12%
 ---------- ---------- */
 
 /* ---------- reset CSS ---------- */
-html, body { font-size:24px; color:#444; font-family: 'Share Tech', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', sans-serif; background:#fff; }
+html, body { position:relative; font-size:24px; color:#444; font-family: 'Share Tech', 'LiHei Pro', '微軟正黑體', 'Microsoft JhengHei', sans-serif; background:#fff; }
 h1, h2 { font-family: 'Poiret One', cursive; font-weight: bold; }
 h2 { color:#0097A7; }
 
@@ -54,8 +54,10 @@ section { position:relative; padding-top:60px; padding-bottom:60px; }
 
 
 #showcase {  }
+#showcaseTag { margin-bottom: 10px; }
+.label-tag { background-color:#FFC400; }
+.label-tag.active, .label-tag:hover { background-color:#FFE57F; }
 .block { display:block; width:300px; height:150px; background:#B2EBF2; }
-.label-hash { background-color:#FFC400; }
 
 /* ---------- mobile style for device width <= 480px ---------- */
 @media screen and (max-width: 768px) {
