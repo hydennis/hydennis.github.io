@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/freewall.js"></script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar">
     <div id="fb-root"></div>
     <script>
     (function(d, s, id) {
@@ -29,16 +32,16 @@
     }(document, 'script', 'facebook-jssdk'));
     </script>
     <nav>
-        <div class="container">
+        <div class="container nav" id="navbar">
             <a class="col-xs-3 text-center" href="#home">
                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                 <br class="visible-sm-inline" />
                 <span class="hidden-xs">home</span>
             </a>
-            <a class="col-xs-3 text-center" href="#about">
+            <a class="col-xs-3 text-center" href="#profile">
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                 <br class="visible-sm-inline" />
-                <span class="hidden-xs">about</span>
+                <span class="hidden-xs">profile</span>
             </a>
             <a class="col-xs-3 text-center" href="#showcase">
                 <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
@@ -54,30 +57,57 @@
     </nav>
     <div id="landing">
         <section class="container" id="home">
-            <h1>Hi! This is Dennis.<br />I am a web developer.</h1>
+            <h1>Hi! This is Dennis.<br />Check out my portfolio!</h1>
         </section>
     </div>
     <div class="container" id="frame">
-        <section id="about">
-            <h2>about</h2>
-            <p>Hi, this is Dennis. I’m a web developer. I’m currently working for a conglomerate with businesses in e-commerce, retail, wholesale and manufacture for 3 years. I also worked for a digital agency for around 2 years. Before working for these companies, I graduated from HK Polytechnic University on part-time basis.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam semper elit sit amet suscipit. Ut eget tortor et nulla volutpat varius porttitor a lacus. Nam eu mi erat. Donec pulvinar placerat nisi, nec vestibulum nulla lacinia a. Maecenas ligula arcu, congue at massa id, feugiat ornare est. Aliquam erat volutpat. Sed aliquet tellus purus, non rhoncus nibh dignissim sed. Pellentesque pulvinar urna sit amet est blandit laoreet. Integer vel enim diam. Nulla fringilla nisl risus, nec bibendum lacus convallis eu. Nulla facilisi. Nullam lectus nisi, lacinia sit amet auctor id, cursus ut augue. Nulla neque tortor, vulputate at orci sit amet, pulvinar suscipit neque. Vivamus quis ipsum sed ex molestie volutpat quis quis magna. Ut sodales lorem ut euismod tempor. Sed quis molestie dolor. Maecenas at est at dui venenatis bibendum. Morbi mi tortor, mattis vel mauris at, pellentesque tincidunt ipsum. Donec in lacus at mauris pretium accumsan. Nunc non turpis id quam malesuada fringilla ac sed tortor. Nulla pharetra pulvinar odio id vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam eu quam id dui sagittis dictum. Proin nisl arcu, condimentum quis sapien eu, consequat facilisis velit. Aenean pharetra ullamcorper libero ut rutrum. Proin congue at tortor vitae tempor. Aenean et dignissim libero. Maecenas ut ante quis urna ultrices tempor ac vitae sem. Curabitur pretium diam vel sem feugiat commodo. Fusce venenatis condimentum velit. Ut ut ligula facilisis, sodales sem nec, rhoncus ipsum. Sed posuere dapibus nisl eget posuere. Duis interdum tempus libero, ut vulputate dolor aliquet ut. Aliquam blandit aliquam mi, vitae ultricies nibh pharetra ac. Donec laoreet ex euismod, rhoncus nibh vitae, porttitor nunc. Morbi sed hendrerit dolor. Quisque ipsum enim, semper nec arcu ac, condimentum mattis diam. Maecenas sit amet massa eget tellus tincidunt ultricies. Vivamus ante tortor, cursus non ultrices quis, accumsan nec ligula. Fusce faucibus rutrum dictum. Sed ac tortor in erat varius ultrices. Praesent sagittis, velit at posuere maximus, massa tortor aliquam magna, id consectetur erat enim in neque. Aliquam pretium aliquam turpis vel accumsan. Duis sollicitudin orci sed ex luctus lobortis. Fusce sed diam at sapien posuere mattis non suscipit dui. Cras a maximus urna, eget sagittis nibh. Duis bibendum euismod tincidunt. Donec rutrum porttitor dolor eu posuere. Maecenas tempor, augue sit amet pharetra dictum, lectus magna convallis risus, eu laoreet nisl libero nec urna. Aenean venenatis velit ut semper lacinia. Pellentesque odio lorem, malesuada vitae urna eget, viverra tincidunt odio. Curabitur ullamcorper faucibus nisi. Aliquam ullamcorper, orci quis luctus ullamcorper, sem dui maximus dolor, eu placerat nibh ipsum elementum sapien. Cras risus magna, eleifend sit amet augue quis, luctus tempus massa. Cras pellentesque odio enim, ut finibus enim consequat tempus. Vestibulum imperdiet in purus ac vestibulum. Vivamus interdum nulla ipsum, vitae ultrices sem laoreet a.</p>
+        <section id="profile">
+            <h2>profile</h2>
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">Name: Dennis Lai</li>
+                        <li class="list-group-item">Occupation: Web Developer</li>
+                        <li class="list-group-item">Experience: 5 years</li>
+                        <li class="list-group-item">Skills: 
+                            <span class="label label-tag">HTML5/CSS3</span>
+                            <span class="label label-tag">JavaScript/JQuery</span>
+                            <span class="label label-tag">AJAX</span>
+                            <span class="label label-tag">JSON</span>
+                            <span class="label label-tag">XML</span>
+                            <span class="label label-tag">PHP</span>
+                            <span class="label label-tag">C#</span>
+                            <span class="label label-tag">asp.net/MVC</span>
+                            <span class="label label-tag">MSSQL/MySQL</span>
+                            <span class="label label-tag">Bootstrap</span>
+                            <span class="label label-tag">angular.js</span>
+                            <span class="label label-tag">Responsive Web Design</span>
+                            <span class="label label-tag">ActionScript</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <div id="profileChart"></div>
+                </div>
+            </div>
         </section>
         <section id="showcase">
             <h2>showcase</h2>
-            <a class="label label-hash">#CSS</a>
-            <a class="label label-hash">#HTML</a>
+            <div id="showcaseTag">
+                <a class="label label-tag active">All</a>
+                <a class="label label-tag" data-tag="tag-css">#CSS</a>
+                <a class="label label-tag" data-tag="tag-html">#HTML</a>
+            </div>
             <div id="showcaseContent">
-                <a class="block"></a>
-                <a class="block"></a>
-                <a class="block"></a>
-                <a class="block"></a>
-                <a class="block"></a>
-                <a class="block"></a>
-                <a class="block"></a>
-                <a class="block"></a>
-                <a class="block"></a>
+                <a class="block tag-css tag-html"></a>
+                <a class="block tag-css"></a>
+                <a class="block tag-html"></a>
+                <a class="block tag-css"></a>
+                <a class="block tag-css"></a>
+                <a class="block tag-css tag-html"></a>
+                <a class="block tag-html"></a>
+                <a class="block tag-html"></a>
+                <a class="block tag-html"></a>
             </div>
         </section>
         <section id="contact">
@@ -88,20 +118,20 @@
     </div>
     <script src="js/script.js"></script>
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-50454824-1', 'auto');
-        ga('send', 'pageview');
+    ga('create', 'UA-50454824-1', 'auto');
+    ga('send', 'pageview');
     </script>
 </body>
 
